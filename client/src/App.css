@@ -1,0 +1,87 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  max-width: 50vw;
+  margin: 180px auto;
+}
+
+.table {
+  width: 40vw;
+  margin: 0 auto;
+  border-radius: 8px;
+  padding: 32px;
+  text-align: center;
+  background-color: #202024;
+}
+
+.boxDados {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 24px;
+  background-color: #202024;  
+}
+
+.btnDado {
+  width: 150px;
+  height: 75px;
+  border-radius: 8px;
+  border: none;
+  font-size: 28px;
+  font-weight: bold;
+  background-color: #81D8F7;
+  margin: 8px;
+
+  cursor: pointer;
+  box-shadow: 2px 2px 0 rgba(0,0,0,0.5);
+}
+
+.btnDado:active {
+  box-shadow: 0 0 0 0 black, inset 2px 2px 2px black; 
+}
+
+.boxJogar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #202024;
+  margin-bottom: 12px;
+  margin-top: 54px;
+  gap: 32px;
+}
+
+.btnJogar {
+  width: 200px;
+  height: 60px;
+  border-radius: 8px;
+  border: none;
+  font-size: 28px;
+  font-weight: bold;
+  background-color: white;
+  padding: 12px;
+
+  cursor: pointer;
+  box-shadow: 2px 2px 0 rgba(0,0,0,0.5);
+}
+
+.btnJogar:active {
+  box-shadow: 0 0 0 0 black, inset 2px 2px 2px black; 
+}
+
+p {
+  background-color: #202024;
+  color: white;
+  font-size: 20px;
+}
+
+strong {
+  background-color: #202024;
+}
+
+.resultado {
+  background-color: #202024;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
