@@ -61,6 +61,56 @@ strong {
 .resultado {
   background-color: #202024;
   color: white;
-  font-size: 24px;
+  font-size: 28px;
   font-weight: bold;
+}
+
+.boxHistorico {
+  display: grid;
+  justify-content: center;
+  margin-top: 54px;
+  border-radius: 8px;
+  padding: 20px 0;
+}
+
+.boxNumeros {
+  display: grid;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.titleHistorico {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 4px;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  justify-self: center;
+  padding: 16px;
+}
+
+li {
+  color: white;
+}
+
+.btnLimpar {
+  width: 160px;
+  height: 40px;
+  border-radius: 8px;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #81D8F7;
+  justify-self: center;
+  cursor: pointer;
+  box-shadow: 2px 2px 0 rgba(0,0,0,0.5);
+}
+
+.btnLimpar:active {
+  box-shadow: 0 0 0 0 black, inset 2px 2px 2px black; 
 }
