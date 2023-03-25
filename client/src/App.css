@@ -14,11 +14,18 @@
   background-color: #202024;
 }
 
+.title {
+  background-color: #202024;
+  color: white;
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
 .boxDados {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
   background-color: #202024;  
 }
 
@@ -40,39 +47,11 @@
   box-shadow: 0 0 0 0 black, inset 2px 2px 2px black; 
 }
 
-.boxJogar {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  background-color: #202024;
-  margin-bottom: 12px;
-  margin-top: 54px;
-  gap: 32px;
-}
-
-.btnJogar {
-  width: 200px;
-  height: 60px;
-  border-radius: 8px;
-  border: none;
-  font-size: 28px;
-  font-weight: bold;
-  background-color: white;
-  padding: 12px;
-
-  cursor: pointer;
-  box-shadow: 2px 2px 0 rgba(0,0,0,0.5);
-}
-
-.btnJogar:active {
-  box-shadow: 0 0 0 0 black, inset 2px 2px 2px black; 
-}
-
-p {
+.lados {
   background-color: #202024;
   color: white;
   font-size: 20px;
+  margin-bottom: 40px;
 }
 
 strong {

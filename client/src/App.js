@@ -1,45 +1,35 @@
-import React, { useState, useEffect } from "react";
-import logo from "./logo.svg";
+import React, { useState } from "react";
 import axios from "axios";
 import "./App.css";
 
 function App() {
-  const [data, setData] = useState(null);
+  const [ladosDado, setLadosDado] = useState(6);
+  const [resultado, setResultado] = useState(null);
 
-  useEffect(() => {
-    fetch("/rolar/6")
-      .then((res) => res.json())
-      .then((data) => setData(data.resultado));
-  }, []);
-
-  function handleJogarDado() {
-    const dado = 6 //número de lados do dado escolhido
-    axios.get(`rolar/${dado}`).then(function(res) {
+  function handleSelecionarDado(lados) { 
+    axios.get(`rolar/${lados}`).then(function(res) {
       const resultado = res.data.resultado;
-      alert(`O resultado da rolagem do dado ${dado} foi ${resultado}`);
+      setResultado(`O resultado da rolagem foi: ${resultado}`);
     }).catch(function(error) {
       console.error(error);
     });
   }
 
-
-
   return (
     <div className="app">
       <div className="table">
+
+        <p className="title">Clique em um dos dados abaixo para obter um resultado</p>
+
         <div className="boxDados">
-          <button className="btnDado">D6</button>
-          <button className="btnDado">D12</button>
-          <button className="btnDado">D20</button>
+          <button className="btnDado" onClick={() => {setLadosDado(6); handleSelecionarDado(6)}}>D6</button>
+          <button className="btnDado" onClick={() => {setLadosDado(12); handleSelecionarDado(12)}}>D12</button>
+          <button className="btnDado" onClick={() => {setLadosDado(20); handleSelecionarDado(20)}}>D20</button>
         </div>
-        <p>Dado de <strong>6</strong> lados selecionado</p>
-        <div className="line"></div>
-        <div className="boxJogar">
-          <button className="btnJogar" onClick={handleJogarDado}>Jogar dado</button>
-          <p className="resultado">
-          Resultado: {!data ? "Loading..." : data}
-          </p>
-        </div>
+
+        <p className="lados">Dado de <strong>{ladosDado} lados</strong> selecionado</p>
+
+        {resultado && <p className="resultado">{resultado}</p>} 
         
       </div>
     </div>
