@@ -9,6 +9,7 @@
 body {
   background-image: url("./assets/rpg-dark.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; 
+  background-color: black;
 }
 
