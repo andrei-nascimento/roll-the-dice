@@ -1,16 +1,19 @@
 import React, { useState } from "react";
 import axios from "axios";
+import d8 from "./assets/d8.png";
+import d12 from "./assets/d12.png";
+import d20 from "./assets/d20.png";
 import "./App.css";
 
 function App() {
-  const [ladosDado, setLadosDado] = useState(6);
+  const [ladosDado, setLadosDado] = useState(8);
   const [resultado, setResultado] = useState(null);
   const [historicoLancamentos, setHistoricoLancamentos] = useState([]);
 
   function handleSelecionarDado(lados) { 
     axios.get(`rolar/${lados}`).then(function(res) {
       const resultado = res.data.resultado;
-      setResultado(`O resultado da rolagem foi: ${resultado}`);
+      setResultado(`Resultado: ${resultado}`);
       setHistoricoLancamentos([...historicoLancamentos, resultado]);
     }).catch(function(error) {
       console.error(error);
@@ -25,31 +28,43 @@ function App() {
     <div className="app">
       <div className="table">
 
-        <p className="title">Clique em um dos dados abaixo para obter um resultado</p>
+        <p className="title">Clique em um dos dados para obter um resultado</p>
 
         <div className="boxDados">
-          <button className="btnDado" onClick={() => {setLadosDado(6); handleSelecionarDado(6)}}>D6</button>
-          <button className="btnDado" onClick={() => {setLadosDado(12); handleSelecionarDado(12)}}>D12</button>
-          <button className="btnDado" onClick={() => {setLadosDado(20); handleSelecionarDado(20)}}>D20</button>
+          <img src={d8} alt="dado 8 lados"
+          className="btnDado" 
+          onClick={() => {setLadosDado(8); handleSelecionarDado(8)}} 
+          />
+          <img src={d12} alt="dado 12 lados"
+          className="btnDado" 
+          onClick={() => {setLadosDado(12); handleSelecionarDado(12)}} 
+          />
+          <img src={d20} alt="dado 20 lados"
+          className="btnDado" 
+          onClick={() => {setLadosDado(20); handleSelecionarDado(20)}} 
+          />
         </div>
 
-        <p className="lados">Dado de <strong>{ladosDado} lados</strong> selecionado</p>
+        <p className="lados">
+          Dado de <strong>{ladosDado} lados</strong> selecionado
+        </p>
 
         {resultado && <p className="resultado">{resultado}</p>} 
         
-        <div className="boxHistorico">
+        {resultado && <div className="boxHistorico">
           {historicoLancamentos.length > 0 && (
             <div className="boxNumeros">
-              <p className="titleHistorico">Histórico de lançamentos:</p>
+              <p className="titleHistorico">Histórico de lançamentos</p>
               <ul>
                 {historicoLancamentos.map((resultado, index) => (
                   <li key={index}>{resultado}-</li>
                 ))}
               </ul>
+              <button className="btnLimpar" onClick={handleLimparHistorico}>Limpar histórico</button>
             </div>
           )}
-          <button className="btnLimpar" onClick={handleLimparHistorico}>Limpar histórico</button>
-        </div>
+          
+        </div>}
         
       </div>
     </div>

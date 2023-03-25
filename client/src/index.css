@@ -2,8 +2,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #121214;
   font-family: Rubik;
 	-webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-image: url("./assets/rpg-dark.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
