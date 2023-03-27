@@ -11,7 +11,7 @@ Por ser responsivo, pode ser utilizado também em dispositiveis móveis.
 O projeto é uma aplicação fullstack utilizando tecnologias como React JS (front-end) e Node JS (back-end).
 Foi desenvolvida com a finalidade de ser apresentada em um teste técnico.
 
-## 📸 Sreenshots
+## 📸 Screenshots
 
 Tela inicial:
 ![img1](https://user-images.githubusercontent.com/76922943/227814160-0a7e5a82-3637-4e43-8841-f56e6723dde1.png)
