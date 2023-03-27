@@ -33,7 +33,7 @@ Configure sua máquina antes de realizar os testes com este passo a passo:
 
 * [React JS](https://pt-br.reactjs.org/) 
 * [Node JS](https://nodejs.org/en/about)
-* CSS
+* CSS/HTML
 
 ## ✒️ Autor
 
