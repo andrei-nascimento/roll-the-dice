@@ -6,20 +6,25 @@ import d20 from "./assets/d20.png";
 import "./App.css";
 
 function App() {
+  // Estados (valores que serão atualizados na aplicação)
   const [ladosDado, setLadosDado] = useState(8);
   const [resultado, setResultado] = useState(null);
   const [historicoLancamentos, setHistoricoLancamentos] = useState([]);
 
+  // Função que envia uma solicitação GET para o endpoint da API usando a biblioteca axios.
+  // Caso a requisição seja bem sucedida, o state "resultado" e "historicoLancamentos" serão atualizados e exibidos na tela.
   function handleSelecionarDado(lados) { 
-    axios.get(`rolar/${lados}`).then(function(res) {
-      const resultado = res.data.resultado;
-      setResultado(`Resultado: ${resultado}`);
-      setHistoricoLancamentos([...historicoLancamentos, resultado]);
-    }).catch(function(error) {
-      console.error(error);
+    axios.get(`rolar/${lados}`)
+      .then(function(res) {
+        const resultado = res.data.resultado;
+        setResultado(`Resultado: ${resultado}`);
+        setHistoricoLancamentos([...historicoLancamentos, resultado]);
+      }).catch(function(error) {
+        console.error(error);
     });
   }
 
+  // Função que seta o array de histórico de lançamentos para seu valor inicial que é vazio 
   function handleLimparHistorico() {
     setHistoricoLancamentos([]);
   }
