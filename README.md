@@ -1,7 +1,7 @@
 # 🎲 Roll the Dice
 
 "Roll the Dice" é uma expressão em inglês que significa "rolar os dados". 
-Frequentemente utilizada em jogos de tabuleiro, jogos de cartas, jogos de RPG (Role-Playing Games)
+Frequentemente utilizada em jogos de tabuleiro, cartas, RPG (Role-Playing Games)
 e outros tipos de jogos em que o resultado das ações dos jogadores é determinada de forma aleatória, por meio da rolagem dos dados. 
 
 Neste projeto específico há 3 tipos de dados disponíveis para serem usados, o dado com 8 lados, 12 lados e 20 lados.
@@ -24,10 +24,10 @@ Após alguns lançamentos:
 Configure sua máquina antes de realizar os testes com este passo a passo:
 
 1. Crie um clone deste repositório com o comando `git clone`
-2. Caso tenha o Node instalado em sua máquina, instale as dependências com o comando `npm install`
-3. Para executar o front-end e o back-end ao mesmo tempo abra dois terminais, um dentro da pasta "client" e outra na pasta raíz do projeto.
-4. Rode o comando `npm start` em ambos os terminais.
-5. A aplicação será executada automaticamente em uma nova guia do seu navegador e já estará pronta para testar.
+2. Para executar o front-end e o back-end ao mesmo tempo abra dois terminais, um dentro da pasta "client" e outra na pasta raíz do projeto.
+3. Caso tenha o Node instalado em sua máquina, instale as dependências em ambos os terminais abertos com o comando `npm install`
+4. Rode primeiramente o comando `npm start` no terminal da raiz do projeto, e em seguida, no terminal dentro da pasta "client".
+5. A aplicação será executada automaticamente em uma nova guia do seu navegador e já estará pronta para ser testada.
 
 ## 🛠️ Construído com
 
