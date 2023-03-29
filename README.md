@@ -6,7 +6,7 @@ e outros tipos de jogos em que o resultado das ações dos jogadores é determin
 
 Neste projeto específico há 3 tipos de dados disponíveis para serem usados, o dado com 8 lados, 12 lados e 20 lados.
 Assim que um deles for selecionado/clicado, será exibido na tela o resultado gerado de forma aleatória e o histórico de lançamentos.  
-Por ser responsivo, pode ser utilizado também em dispositiveis móveis.
+Por ser responsivo, pode ser utilizado também em dispositivos móveis.
 
 O projeto é uma aplicação fullstack utilizando tecnologias como React JS (front-end) e Node JS (back-end).
 Foi desenvolvida com a finalidade de ser apresentada em um teste técnico.
