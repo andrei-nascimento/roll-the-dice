@@ -19,9 +19,6 @@ Tela inicial:
 Após alguns lançamentos:
 ![img2](https://user-images.githubusercontent.com/76922943/227814163-cce7136b-d1e8-4392-8064-c29b2a68f274.png)
 
-## 📹 Vídeo Explicativo
-https://user-images.githubusercontent.com/76922943/230455117-f67c9974-1811-4e3f-88e8-1aa221d73489.mp4
-
 ## 🔧 Instalação
 
 Configure sua máquina antes de realizar os testes com este passo a passo:
